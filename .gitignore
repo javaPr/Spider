@@ -10,7 +10,10 @@ data/*
 static/assets/*
 # Distribution / packaging
 .Python
-
+*.txt
+*.html
+*.dat
+*.xls
 # Spyder project settings
 .spyderproject
 .spyproject
