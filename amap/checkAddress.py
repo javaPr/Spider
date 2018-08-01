@@ -6,10 +6,11 @@ Time 2018/7/23
 """
 
 import csv
-import requests
-import numpy as np
 import threading
-import save2File
+
+import numpy as np
+import requests
+from utils import save2File
 
 #BASE_URL = "http://api.map.baidu.com/geocoder/v2/?address={address}&output=json&ak=gQsCAgCrWsuN99ggSIjGn5nO&callback=showLocation0"
 BASE_URL = "http://api.map.baidu.com/geocoder/v2/?address={address}&output=json&ak=5ErzLvtGmrkyHVY5HnG9GeMqvgpApGkt&city=上海市"

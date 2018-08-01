@@ -5,19 +5,21 @@ Author wangdechang
 Time 2018/7/25
 """
 
-from queue import Queue
+import codecs
+import gzip
+import json
+import math
 import re
-import urllib
-import time
-from bs4 import BeautifulSoup
 import socket
 import sys
-import math
-import json
-import gzip
-import codecs
+import time
+import urllib
 from io import BytesIO
-import Distribute
+from queue import Queue
+
+from bs4 import BeautifulSoup
+
+from fang import Distribute
 
 timeout = 15
 socket.setdefaulttimeout(timeout)

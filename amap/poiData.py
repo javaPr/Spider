@@ -5,10 +5,12 @@ Author wangdechang
 Time 2018/7/17
 """
 
-import requests
-import save2File
-import readData
 import time
+
+import requests
+
+from utils import save2File
+import readData
 
 shanghai_adcode = ['310000', '310100', '310101', '310104', '310105', '310106', '310107',
                    '310109', '310110', '310112', '310113', '310114',
@@ -35,7 +37,7 @@ def requestData():
             try:
                 res = requests.get(assembleURL(keyword, adcode))
             except:
-                save2File.saveErrorKeywordsAndCode(adcode,keyword)
+                save2File.saveErrorKeywordsAndCode(adcode, keyword)
             else:
                 resJson = res.json()
                 if 'data' in resJson and 'poi_list' in resJson['data']:
@@ -52,7 +54,7 @@ def requestData():
                         try:
                             res = requests.get(assembleURL(keyword, adcode, page))
                         except:
-                            save2File.saveErrorKeywordsAndCode(adcode,keyword)
+                            save2File.saveErrorKeywordsAndCode(adcode, keyword)
                         else:
                             resJson = res.json()
                             if 'poi_list' in resJson['data']:
